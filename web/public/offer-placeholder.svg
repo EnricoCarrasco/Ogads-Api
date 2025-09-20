@@ -1,0 +1,22 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Offer placeholder</title>
+  <desc id="desc">Geometric gradient background used when an offer does not provide artwork.</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5866F9" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#8758FF" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#FF8EE3" stop-opacity="0.65" />
+    </linearGradient>
+    <radialGradient id="rad" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#grad)" />
+  <circle cx="320" cy="60" r="110" fill="url(#rad)" />
+  <g fill="#fff" opacity="0.8">
+    <rect x="60" y="70" width="96" height="14" rx="7" />
+    <rect x="60" y="98" width="172" height="14" rx="7" />
+    <rect x="60" y="126" width="132" height="14" rx="7" />
+  </g>
+</svg>

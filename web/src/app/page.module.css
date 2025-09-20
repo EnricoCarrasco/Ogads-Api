@@ -1,0 +1,287 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(132, 207, 255, 0.25), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(111, 76, 255, 0.18), transparent 50%),
+    linear-gradient(180deg, #f5fbff 0%, #f6f3ff 100%);
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem 4rem;
+  color: #0f1a2e;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(40px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  width: min(1200px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(228, 234, 255, 0.7));
+  box-shadow: 0 25px 60px rgba(54, 75, 120, 0.18);
+}
+
+.kicker {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #5a6bcc;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: rgba(15, 26, 46, 0.72);
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+.headerMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  min-width: 220px;
+}
+
+.locationCard {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(90, 107, 204, 0.25);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  text-align: right;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.locationLabel {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: rgba(15, 26, 46, 0.55);
+}
+
+.locationValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.locationIp {
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  color: rgba(15, 26, 46, 0.6);
+}
+
+.deviceMeta {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: rgba(15, 26, 46, 0.58);
+}
+
+.locationFallback {
+  font-size: 0.95rem;
+  color: rgba(15, 26, 46, 0.65);
+}
+
+.refreshButton {
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.75rem;
+  background: linear-gradient(135deg, #5866f9 0%, #8758ff 100%);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.refreshButton:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  filter: grayscale(0.2);
+}
+
+.refreshButton:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(88, 102, 249, 0.28);
+}
+
+.stateCard {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: inset 0 0 0 1px rgba(50, 70, 140, 0.1);
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.stateTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.stateDescription {
+  color: rgba(15, 26, 46, 0.65);
+  max-width: 40rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.offersSection {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.offersHeader h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.offersHeader p {
+  color: rgba(15, 26, 46, 0.7);
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.offerCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(29, 51, 102, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid rgba(134, 155, 255, 0.12);
+}
+
+.offerImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: linear-gradient(135deg, rgba(88, 102, 249, 0.15), rgba(135, 88, 255, 0.1));
+}
+
+.offerBody {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.offerBody h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d3266;
+}
+
+.offerDescription {
+  color: rgba(15, 26, 46, 0.7);
+  line-height: 1.6;
+  max-height: 6.5rem;
+  overflow: hidden;
+}
+
+.metaList {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.metaList div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: rgba(15, 26, 46, 0.8);
+}
+
+.metaList dt {
+  font-weight: 600;
+}
+
+.metaList dd {
+  margin: 0;
+}
+
+.offerFooter {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(134, 155, 255, 0.15);
+  display: flex;
+}
+
+.offerButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  background: #182d81;
+  color: white;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.offerButton:hover {
+  background: #0f1f58;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 2.5rem 1rem 3rem;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  .headerMeta {
+    align-items: stretch;
+  }
+
+  .locationCard {
+    text-align: left;
+  }
+}
+
+@media (max-width: 540px) {
+  .offerImage {
+    height: 160px;
+  }
+
+  .metaList div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+}
